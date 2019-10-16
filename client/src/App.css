@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 600px;
+  flex: 1;
+}
+
+.page-footer {
+  height: 50px;
+}
