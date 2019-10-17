@@ -7,8 +7,7 @@ import {
   UPDATE_LOG,
   SEARCH_LOGS,
   SET_CURRENT,
-  CLEAR_CURRENT,
-  FILTER
+  CLEAR_CURRENT
 } from '../actions/types';
 
 const initialState = {
@@ -60,14 +59,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         current: null
-      };
-    case FILTER:
-      return {
-        ...state,
-        filtered: state.logs.filter(log => {
-          const regex = new RegExp(`${action.payload}`, 'gi');
-          return log.match(regex);
-        })
       };
     case SET_LOADING:
       return {
